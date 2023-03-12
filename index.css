@@ -1,0 +1,244 @@
+:root{
+    --back-color: #1D1C2F;
+    --main-color: #01EFFF;
+    --font-color: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: #2C3540;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 350px;
+    height: 400px;
+    background-color: #1D1C2F;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px #01efff;
+}
+
+.rotate{
+    position: absolute;
+    top: -130px;
+    left: -130px;
+    width: 600px;
+    height: 700px;
+    background: linear-gradient(180deg, #01efff,red);
+    animation: myAni 3s linear infinite;
+}
+
+.square{
+    position: absolute;
+    width: 336px;
+    height: 386px;
+    background-color: #262d36;
+    top: 0;
+    left: 0;
+    margin: 7px;
+    z-index: 999;
+    padding: 2rem 10px;
+    text-align: center;
+}
+.square h2{
+    font-size: 35px;
+    color: #01efff;
+    text-transform: uppercase;
+}
+
+.input{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #01efff;
+    position: relative;
+    margin: 2.5rem 0;
+}
+
+.input input{
+    width: 100%;
+    padding: 10px 2px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+}
+.input label{
+    position: absolute;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 2px;
+    color: white;
+    transition: 1s all;
+}
+
+.input input:focus~label,
+.input input:valid~label{
+    color: #01efff;
+    top: -20px;
+    font-size: 12px;
+}
+
+.forget{
+    display: flex;
+    justify-content: space-between;
+    margin: -10px 0 10px;
+}
+
+.forget .left span{
+    font-size: 16px;
+    padding-left: 5px;
+    color: white;
+}
+
+.left input:checked~span{
+    color: #01efff;
+}
+
+.forget .right a{
+     color: white;
+}
+.forget .right a:hover{
+    color: #01efff;
+}
+
+
+
+/* ===================BORDER Animation==================== */
+@keyframes myAni{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+.btn{
+    padding: 12px 50px;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    background: transparent;
+    margin: 15px 0;
+    font-size: 17px;
+    color: white;
+}
+
+.btn span{
+    position: absolute;
+    display: block;
+}
+
+.btn span:nth-child(1)
+{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,var(--main-color));
+    animation: ani1 1s linear infinite;
+    transition: .5s;
+    animation-delay: 1s;
+}
+
+.btn span:nth-child(3)
+{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,var(--main-color));
+    transition:0.5s;
+    animation: ani3 1s linear infinite;
+    animation-delay: 1.5s;
+}
+/* =====RIGHT============ */
+
+.btn span:nth-child(2)
+{
+    right: 0;
+    top: -100%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,var(--main-color));
+    animation: ani2 1s linear infinite;
+    animation-delay: 1.25s;
+}
+
+.btn span:nth-child(4)
+{
+    left: 0;
+    bottom: -100%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,var(--main-color));
+    transition: .5s;
+    animation: ani4 1s linear infinite;
+    animation-delay: 1.75s;
+}
+
+.btn:hover{
+    box-shadow: 0 0 10px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
+}
+
+
+
+
+@keyframes ani1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+
+@keyframes ani2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+
+@keyframes ani3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+@keyframes ani4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+
