@@ -22,10 +22,10 @@
 .box{
     width: 350px;
     height: 400px;
-    background-color: #1D1C2F;
+    background-color: var(--back-color);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 10px #01efff;
+    box-shadow: 0 0 10px var(--main-color);
 }
 
 .rotate{
@@ -34,7 +34,7 @@
     left: -130px;
     width: 600px;
     height: 700px;
-    background: linear-gradient(180deg, #01efff,red);
+    background: linear-gradient(180deg, var(--main-color),red);
     animation: myAni 3s linear infinite;
 }
 
@@ -42,7 +42,7 @@
     position: absolute;
     width: 336px;
     height: 386px;
-    background-color: #262d36;
+    background-color: var(--back-color);
     top: 0;
     left: 0;
     margin: 7px;
@@ -52,14 +52,14 @@
 }
 .square h2{
     font-size: 35px;
-    color: #01efff;
+    color: var(--main-color);
     text-transform: uppercase;
 }
 
 .input{
     display: flex;
     width: 100%;
-    border-bottom: 1px solid #01efff;
+    border-bottom: 1px solid var(--main-color);
     position: relative;
     margin: 2.5rem 0;
 }
@@ -70,7 +70,7 @@
     outline: none;
     border: none;
     background: transparent;
-    color: white;
+    color: var(--font-color);
     font-size: 16px;
 }
 .input label{
@@ -78,13 +78,13 @@
     font-size: 14px;
     text-transform: uppercase;
     padding: 10px 2px;
-    color: white;
+    color: var(--font-color);
     transition: 1s all;
 }
 
 .input input:focus~label,
 .input input:valid~label{
-    color: #01efff;
+    color: var(--main-color);
     top: -20px;
     font-size: 12px;
 }
@@ -98,18 +98,18 @@
 .forget .left span{
     font-size: 16px;
     padding-left: 5px;
-    color: white;
+    color: var(--font-color);
 }
 
 .left input:checked~span{
-    color: #01efff;
+    color: var(--main-color);
 }
 
 .forget .right a{
-     color: white;
+     color: var(--fonnt--font-color);
 }
 .forget .right a:hover{
-    color: #01efff;
+    color: var(--main-color);
 }
 
 
@@ -140,7 +140,7 @@
     background: transparent;
     margin: 15px 0;
     font-size: 17px;
-    color: white;
+    color: var(--font-color);
 }
 
 .btn span{
@@ -199,7 +199,7 @@
 .btn:hover{
     box-shadow: 0 0 10px var(--main-color);
     background-color: var(--main-color);
-    color: black;
+    color: #000;
 }
 
 
